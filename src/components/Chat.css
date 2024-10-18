@@ -1,5 +1,6 @@
 .chat-background {
-    background-image: url('D:\assigment\CHATBOX\chat-app\src\components\chatbot-ux-design.png');
+  background-image: url('./chatbot-ux-design.png');
+
     background-size: cover;
     background-position: center;
     position: relative;
