@@ -1,11 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css'; // Optional: Your global styles
+import Chat from './components/Chat';
+import Header from './components/Header';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const theme = createTheme({
+  palette: {
+    mode: 'light', // You can change this to 'dark' for dark mode
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {/* Header component */}
+      <Header />
+      
+      {/* Chat interface */}
+      <Chat />
+    </ThemeProvider>
+  );
+}
+
+export default App;
