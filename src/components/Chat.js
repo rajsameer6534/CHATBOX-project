@@ -72,10 +72,19 @@ const Chat = () => {
   return (
     <Grid container sx={{ height: '100vh' }}>
       {/* Sidebar for contacts */}
-      <Grid item xs={3} sx={{ background: 'linear-gradient(45deg, #3a7bd5 30%, #00d2ff 90%)', color: 'white', display: 'flex', flexDirection: 'column' }}>
-        <Box sx={{ p: 2, textAlign: 'center',  background: 'linear-gradient(45deg, #3a7bd5 30%, #00d2ff 90%)' }}>
+      <Grid 
+        item 
+        xs={12} sm={3} 
+        sx={{ 
+          background: 'linear-gradient(45deg, #3a7bd5 30%, #00d2ff 90%)', 
+          color: 'white', 
+          display: 'flex', 
+          flexDirection: 'column' 
+        }}
+      >
+        <Box sx={{ p: 2, textAlign: 'center' }}>
           <Typography variant="h4" sx={{ color: 'white' }}>
-           Recent Chats
+            Recent Chats
           </Typography>
         </Box>
         <Box sx={{ p: 2 }}>
@@ -111,7 +120,12 @@ const Chat = () => {
       </Grid>
 
       {/* Chat section with background image */}
-      <Grid item xs={9} className="chat-background" sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+      <Grid 
+        item 
+        xs={12} sm={9} 
+        className="chat-background" 
+        sx={{ p: 2, display: 'flex', flexDirection: 'column' }}
+      >
         <Paper sx={{ p: 3, height: '100%', display: 'flex', flexDirection: 'column', bgcolor: 'rgba(255, 255, 255, 0.3)', borderRadius: '20px' }}>
           {/* Contact Info & Icons */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2, bgcolor: '#f4f7fb', p: 2, borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
